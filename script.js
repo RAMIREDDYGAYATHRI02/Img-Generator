@@ -20,7 +20,7 @@ async function searchImages() {
   }
 
   const results = data.results;
-  results.forEach(photo => {
+  results.forEach((photo) => {
     const image = document.createElement("img");
     image.src = photo.urls.small;
     image.alt = photo.alt_description;
