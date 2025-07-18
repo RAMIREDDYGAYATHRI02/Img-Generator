@@ -1,0 +1,148 @@
+/* CSS Reset & Base Setup */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #39297b;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Page Heading */
+h1 {
+  text-align: center;
+  margin: 100px auto 50px;
+  font-weight: 600;
+  font-size: 25px;
+  color: #ffffff;
+  margin-top: 50px;
+}
+
+/* Search Form Styling */
+form {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  height: 80px;
+  background: #434989;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+form input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 0 30px;
+}
+
+form button {
+  padding: 0 40px;
+  height: 100%;
+  background: #ff3929;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #e03322;
+}
+
+::placeholder {
+  color: #ffffff;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* Show More Button Styling */
+#show-more-btn {
+  background: #ff3929;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin: 20px auto 100px;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s ease;
+  display: none;
+}
+
+#show-more-btn:hover {
+  background: #e03322;
+}
+
+/* Image Grid */
+#search-result {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+#search-result img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+#search-result img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  #search-result {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #search-result {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  form input,
+  form button {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    padding: 0 15px;
+    border-radius: 5px;
+  }
+
+  form button {
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+}
